@@ -1,0 +1,11 @@
+version: "3"
+services:
+    echo-server:
+        image: server
+        expose:
+            - "2000"
+
+    client:
+        image: client
+        links:
+            - echo-server:talkto
